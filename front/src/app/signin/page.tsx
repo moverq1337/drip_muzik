@@ -35,27 +35,26 @@ export default function Room() {
 	return (
 		<div className='flex items-center justify-center h-screen'>
 			<div className='flex flex-col items-center justify-center'>
-				<div className='text-5xl'>SIGN IN</div>
+				<div className='text-5xl font-extrabold flex text-gray-600'>
+					SIGN IN
+				</div>
+
 				<input
+					className='input my-5'
 					type='email'
 					value={email}
 					onChange={e => setEmail(e.target.value)}
-					className='my-2 rounded-md border-white bg-transparent border-2'
 					placeholder='Email'
 				/>
 				<input
 					type='password'
 					value={password}
 					onChange={e => setPassword(e.target.value)}
-					className='my-2 rounded-md border-white bg-transparent border-2'
+					className='input'
 					placeholder='Password'
 				/>
-				<button
-					onClick={handleLogin}
-					className='my-2 rounded-md border-white bg-transparent border-2 px-6'
-				>
-					GO
-				</button>
+
+				<button className='my-5 btn btn-ghost text-gray-500'>Go</button>
 			</div>
 		</div>
 	)
